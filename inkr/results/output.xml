@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.12 on darwin)" generated="20220810 12:26:03.529" rpa="false" schemaversion="2">
+<suite id="s1" name="homePageAction" source="/Users/paultran/Desktop/inkr/homePageAction.robot">
+<test id="s1-t1" name="Test Case">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://inkr.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220810 12:26:03.612" level="INFO">Opening browser 'chrome' to base url 'https://inkr.com/'.</msg>
+<status status="PASS" starttime="20220810 12:26:03.612" endtime="20220810 12:26:16.204"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220810 12:26:16.205" endtime="20220810 12:26:16.552"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_BNT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220810 12:26:16.569" level="INFO">Current page contains element 'xpath=//button[@id='sign-in-button-id']/span[.='Sign in']'.</msg>
+<status status="PASS" starttime="20220810 12:26:16.552" endtime="20220810 12:26:16.569"/>
+</kw>
+<kw name="Create New Users">
+<arg>abc@gss.com</arg>
+<arg>123456</arg>
+<kw name="Click Sign in BNT" library="homePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_BNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:16.570" level="INFO">Clicking element 'xpath=//button[@id='sign-in-button-id']/span[.='Sign in']'.</msg>
+<status status="PASS" starttime="20220810 12:26:16.570" endtime="20220810 12:26:16.614"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:16.569" endtime="20220810 12:26:16.614"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220810 12:26:17.616" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220810 12:26:16.615" endtime="20220810 12:26:17.616"/>
+</kw>
+<kw name="Input Email Address" library="homePage">
+<arg>${email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SIGN_IN_INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:17.618" level="INFO">Typing text 'abc@gss.com' into text field 'xpath=/html/body[@class='ant-scrolling-effect']//div[@class='ant-modal-root']/div[@role='dialog']/div[@role='document']//div[@class='ant-modal-body']//input'.</msg>
+<status status="PASS" starttime="20220810 12:26:17.618" endtime="20220810 12:26:17.733"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:17.617" endtime="20220810 12:26:17.733"/>
+</kw>
+<kw name="Click Continue After Input Email BNT" library="homePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_EMAIL_CONTINUDE_BNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:17.734" level="INFO">Clicking element 'xpath=//div[@class='ant-modal-root']/div[@role='dialog']//button[@type='submit']/span[.='Continue']'.</msg>
+<status status="PASS" starttime="20220810 12:26:17.734" endtime="20220810 12:26:17.758"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:17.733" endtime="20220810 12:26:17.759"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220810 12:26:19.760" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220810 12:26:17.759" endtime="20220810 12:26:19.760"/>
+</kw>
+<kw name="Input User Password" library="homePage">
+<arg>${password}</arg>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${SIGN_IN_INPUT_PASSWORD}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220810 12:26:19.761" level="INFO">Simulating Mouse Over on element 'xpath=//div[@class='ant-modal-root']//div[@role='dialog']//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20220810 12:26:19.761" endtime="20220810 12:26:20.043"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_INPUT_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:20.045" level="INFO">Clicking element 'xpath=//div[@class='ant-modal-root']//div[@role='dialog']//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20220810 12:26:20.044" endtime="20220810 12:26:20.084"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${SIGN_IN_INPUT_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:20.085" level="INFO">Typing password into text field 'xpath=//div[@class='ant-modal-root']//div[@role='dialog']//input[@id="password"]'.</msg>
+<msg timestamp="20220810 12:26:20.103" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220810 12:26:20.128" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220810 12:26:20.085" endtime="20220810 12:26:20.129"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:19.760" endtime="20220810 12:26:20.129"/>
+</kw>
+<kw name="Input Confirm Password" library="homePage">
+<arg>${password}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${SIGN_IN_INPUT_CONFIRM_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:20.129" level="INFO">Typing password into text field 'xpath=//div[@class="RT8KG"]//input[@id='confirmPassword']'.</msg>
+<msg timestamp="20220810 12:26:20.146" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220810 12:26:20.168" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220810 12:26:20.129" endtime="20220810 12:26:20.168"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:20.129" endtime="20220810 12:26:20.168"/>
+</kw>
+<kw name="Click Sigin Continue" library="homePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_CONTIUDE_BNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:20.168" level="INFO">Clicking element 'xpath=//div[@role='dialog']//div[@class='ant-modal-body']//form/button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220810 12:26:20.168" endtime="20220810 12:26:20.198"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:20.168" endtime="20220810 12:26:20.199"/>
+</kw>
+<kw name="Click Sign Up Check Box" library="homePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_UP_CHECK_BOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:20.199" level="INFO">Clicking element 'xpath=//div[@class='ant-modal-root']//div[@class='ant-modal-body']//input'.</msg>
+<status status="PASS" starttime="20220810 12:26:20.199" endtime="20220810 12:26:20.221"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:20.199" endtime="20220810 12:26:20.221"/>
+</kw>
+<kw name="Click Sign Up BNT" library="homePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_UP_BNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220810 12:26:20.222" level="INFO">Clicking element 'xpath=//div[@role='dialog']//div[@class='ant-modal-body']//button[@type='button']/span[.='Sign Up']'.</msg>
+<status status="PASS" starttime="20220810 12:26:20.222" endtime="20220810 12:26:20.243"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:20.221" endtime="20220810 12:26:20.243"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:16.569" endtime="20220810 12:26:20.243"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220810 12:26:22.245" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220810 12:26:20.244" endtime="20220810 12:26:22.246"/>
+</kw>
+<kw name="Verify Create Successfully">
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_BNT}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220810 12:26:22.343" level="INFO">Current page does not contain element 'xpath=//button[@id='sign-in-button-id']/span[.='Sign in']'.</msg>
+<status status="PASS" starttime="20220810 12:26:22.247" endtime="20220810 12:26:22.343"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:22.246" endtime="20220810 12:26:22.343"/>
+</kw>
+<status status="PASS" starttime="20220810 12:26:03.612" endtime="20220810 12:26:22.343"/>
+</test>
+<status status="PASS" starttime="20220810 12:26:03.530" endtime="20220810 12:26:22.344"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="homePageAction">homePageAction</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
